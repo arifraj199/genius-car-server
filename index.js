@@ -58,6 +58,10 @@ async function run() {
       res.send(result);
     });
 
+    app.get('/hero', (req,res)=>{
+      res.send('hero api added');
+    })
+
     app.get("/service/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
